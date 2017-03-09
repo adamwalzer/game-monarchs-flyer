@@ -1,51 +1,56 @@
 import loadAssets from 'shared/phaser/methods/load_assets/0.1';
 
 export default function () {
-    loadAssets.call(this, 'image', [
-    ['sky', `${MEDIA.IMAGE}level0${this.opts.level}.panorama.jpg`],
-    ['wind', `${MEDIA.IMAGE}img.wind.png`],
-    ['water', `${MEDIA.IMAGE}img.waterdrop.png`],
-    ['web', `${MEDIA.IMAGE}img.spiderweb.png`],
-    ['log', `${MEDIA.IMAGE}img.log.png`],
-    ['leaf', `${MEDIA.IMAGE}img.leaf.png`],
-    ['egg', `${MEDIA.IMAGE}img.egg.png`],
-    ['cloud', `${MEDIA.IMAGE}img.cloud.png`],
-    ]);
+    let images = [
+    ['wind', `${CMWN.MEDIA.IMAGE}img.wind.png`],
+    ['water', `${CMWN.MEDIA.IMAGE}img.waterdrop.png`],
+    ['web', `${CMWN.MEDIA.IMAGE}img.spiderweb.png`],
+    ['log', `${CMWN.MEDIA.IMAGE}img.log.png`],
+    ['leaf', `${CMWN.MEDIA.IMAGE}img.leaf.png`],
+    ['egg', `${CMWN.MEDIA.IMAGE}img.egg.png`],
+    ['cloud', `${CMWN.MEDIA.IMAGE}img.cloud.png`],
+    ];
+
+    if (this.opts.level) {
+        images.push(['sky', `${CMWN.MEDIA.IMAGE}level0${this.opts.level}.panorama.jpg`]);
+    }
+
+    loadAssets.call(this, 'image', images);
 
     loadAssets.call(this, 'spritesheet', [
-    ['wood', `${MEDIA.SPRITE}sprite.logs.png`, 490, 125],
-    ['land', `${MEDIA.SPRITE}sprite.land.png`, 345, 245],
-    ['fruits', `${MEDIA.SPRITE}sprite.fruits.png`, 120, 105],
-    ['flowers', `${MEDIA.SPRITE}sprite.flowers.png`, 190, 180],
+    ['wood', `${CMWN.MEDIA.SPRITE}sprite.logs.png`, 490, 125],
+    ['land', `${CMWN.MEDIA.SPRITE}sprite.land.png`, 345, 245],
+    ['fruits', `${CMWN.MEDIA.SPRITE}sprite.fruits.png`, 120, 105],
+    ['flowers', `${CMWN.MEDIA.SPRITE}sprite.flowers.png`, 190, 180],
     ]);
 
     loadAssets.call(this, 'atlas', [
         [
             'butterfly',
-            `${MEDIA.SPRITE}monarchsprite.png`,
-            `${MEDIA.SPRITE}monarchsprite.json`
+            `${CMWN.MEDIA.SPRITE}monarchsprite.png`,
+            `${CMWN.MEDIA.SPRITE}monarchsprite.json`
         ],
         [
             'crow',
-            `${MEDIA.SPRITE}crowflyingsprite.png`,
-            `${MEDIA.SPRITE}crowflyingsprite.json`
+            `${CMWN.MEDIA.SPRITE}crowflyingsprite.png`,
+            `${CMWN.MEDIA.SPRITE}crowflyingsprite.json`
         ],
         [
             'star',
-            `${MEDIA.SPRITE}starsprite.png`,
-            `${MEDIA.SPRITE}starsprite.json`
+            `${CMWN.MEDIA.SPRITE}starsprite.png`,
+            `${CMWN.MEDIA.SPRITE}starsprite.json`
         ],
     ]);
 
     loadAssets.call(this, 'audio', [
-    ['egg', `${MEDIA.EFFECT}EggDrop.mp3`],
-    ['obstacle', `${MEDIA.EFFECT}BumpObstacles.mp3`],
-    ['bird', `${MEDIA.EFFECT}Bird.mp3`],
-    ['flower', `${MEDIA.EFFECT}PowerFlower.mp3`],
-    ['water', `${MEDIA.EFFECT}Drop.mp3`],
-    ['cloud', `${MEDIA.EFFECT}Cloud.mp3`],
-    ['wind', `${MEDIA.EFFECT}Wind.mp3`],
-    ['star', `${MEDIA.EFFECT}StarFact.mp3`],
-    ['speed', `${MEDIA.EFFECT}SpeedBKG.mp3`],
+    ['egg', `${CMWN.MEDIA.EFFECT}EggDrop.mp3`],
+    ['obstacle', `${CMWN.MEDIA.EFFECT}BumpObstacles.mp3`],
+    ['bird', `${CMWN.MEDIA.EFFECT}Bird.mp3`],
+    ['flower', `${CMWN.MEDIA.EFFECT}PowerFlower.mp3`],
+    ['water', `${CMWN.MEDIA.EFFECT}Drop.mp3`],
+    ['cloud', `${CMWN.MEDIA.EFFECT}Cloud.mp3`],
+    ['wind', `${CMWN.MEDIA.EFFECT}Wind.mp3`],
+    ['star', `${CMWN.MEDIA.EFFECT}StarFact.mp3`],
+    ['speed', `${CMWN.MEDIA.EFFECT}SpeedBKG.mp3`],
     ]);
 }
