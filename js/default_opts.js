@@ -28,7 +28,7 @@ export default {
     bounceY: 0,
     gravityY: 600,
     playerImage: 'butterfly',
-    playerBody: [500, 100, 500, 500],
+    playerBody: [500, 500, 750, 100],
     leftFrames: [5, 4, 3, 2, 1, 0],
     leftFrameRate: 10,
     leftLoop: true,
@@ -81,14 +81,14 @@ export default {
         }, generalDefaultProps),
         wood1: _.defaults({
             frame: 0,
-            body: [200, 125, 300, 0],
+            body: [200, 120, 150, 0],
         }, woodDefaultProps),
         wood2: _.defaults({
             frame: 1,
         }, woodDefaultProps),
         wood3: _.defaults({
             frame: 2,
-            body: [250, 125, 250, 0],
+            body: [250, 120, 120, 0],
         }, woodDefaultProps),
         land1: _.defaults({
             frame: 0,
