@@ -1,0 +1,9 @@
+{
+    "id": "monarchs-flyer",
+    "media_folder": "monarch",
+    "version": 1,
+    "dimensions": {
+        "width": 960,
+        "height": 540
+    }
+}
